@@ -1,0 +1,307 @@
+{
+  "contractName": "PriceOracleInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "getUnderlyingPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"asset\",\"type\":\"address\"}],\"name\":\"getUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/PriceOracleInterface.sol\":\"PriceOracleInterface\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/PriceOracleInterface.sol\":{\"keccak256\":\"0xa504c34102e1a727dc76e7262bca46079cb5d531cbc23c60a7bf0f0c6976305f\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a3ea489017f2a6f78fb6a54abb6118694d8764ae814c3e8ae802a734143402ab\",\"dweb:/ipfs/QmXnHhkr6ACi57wwKXa6Df74QAuND1bW4QZ5dwM7ro7uqY\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.8.6;\r\n//SPDX-License-Identifier:UNLICENSED\r\n\r\ninterface PriceOracleInterface {\r\n  function getUnderlyingPrice(address asset) external view returns(uint);\r\n}",
+  "sourcePath": "C:\\Users\\const\\Desktop\\Defi\\Compound\\contracts\\PriceOracleInterface.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/PriceOracleInterface.sol",
+    "exportedSymbols": {
+      "PriceOracleInterface": [
+        459
+      ]
+    },
+    "id": 460,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 451,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 459,
+        "linearizedBaseContracts": [
+          459
+        ],
+        "name": "PriceOracleInterface",
+        "nameLocation": "75:20:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "fc57d4df",
+            "id": 458,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlyingPrice",
+            "nameLocation": "110:18:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 454,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 453,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nameLocation": "137:5:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 458,
+                  "src": "129:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 452,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "128:15:5"
+            },
+            "returnParameters": {
+              "id": 457,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 456,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 458,
+                  "src": "166:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 455,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "166:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "165:6:5"
+            },
+            "scope": 459,
+            "src": "101:71:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 460,
+        "src": "65:110:5",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:175:5"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/PriceOracleInterface.sol",
+    "exportedSymbols": {
+      "PriceOracleInterface": [
+        459
+      ]
+    },
+    "id": 460,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 451,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 459,
+        "linearizedBaseContracts": [
+          459
+        ],
+        "name": "PriceOracleInterface",
+        "nameLocation": "75:20:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "fc57d4df",
+            "id": 458,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlyingPrice",
+            "nameLocation": "110:18:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 454,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 453,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nameLocation": "137:5:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 458,
+                  "src": "129:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 452,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "128:15:5"
+            },
+            "returnParameters": {
+              "id": 457,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 456,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 458,
+                  "src": "166:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 455,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "166:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "165:6:5"
+            },
+            "scope": 459,
+            "src": "101:71:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 460,
+        "src": "65:110:5",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:175:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.6+commit.11564f7e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.2",
+  "updatedAt": "2021-09-06T00:54:59.842Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

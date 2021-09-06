@@ -57,7 +57,7 @@ function enterMarket(address cTokenAddress) external {
      //give to us an array of results
      uint[] memory results = comptroller.enterMarkets(markets);
      require(
-        result[0] == 0,
+        results[0] == 0,
         'comptroller#enterMarket() failed. see Compound ErrorReporter.sol for more details'
         );
     }
@@ -69,7 +69,7 @@ function enterMarket(address cTokenAddress) external {
         //call the borrow function
         uint result = cToken.borrow(borrowAmount);
         require(
-            result[0] == 0,
+            result == 0,
             'cToken#borrow() failed. see Compound ErrorReporter.sol for more details'
         );
     }
@@ -79,24 +79,24 @@ function enterMarket(address cTokenAddress) external {
     function repayBorrow(address cTokenAddress, uint underlyingAmount) external {
         CTokenInterface cToken = CTokenInterface(cTokenAddress);
         //call the borrow function
-        uint result = cToken.borrow(borrowAmount);
+        address underlyingAddress = cToken.underlying();
         //approve the underlying to be spent by the cToken address
         IERC20(underlyingAddress).approve(cTokenAddress, underlyingAmount);
         uint result = cToken.repayBorrow(underlyingAmount);
         require(
-            result[0] == 0,
+            result == 0,
             'cToken#repayBorrow() failed. see Compound ErrorReporter.sol for more details'
         );
     }
 
     //what is the maximum amount you can borrow from the asset
     //cTokenAdress: we want to borrow the underlying asset of the cToken
-    function getMaxBorrow(address cTokenAdress) external view returns(uint) {
+    function getMaxBorrow(address cTokenAddress) external view returns(uint) {
         //what is the amount of money in dollars we shortffall or how much money we are short off
         (uint result, uint liquidity, uint shortfall) = comptroller
             .getAccountLiquidity(address(this));
         require(
-            result[0] == 0,
+            result == 0,
             'comptroller#getAccountLiquidity() failed. see Compound ErrorReporter.sol for more details'
         );
         require(shortfall == 0, 'account underwater');
